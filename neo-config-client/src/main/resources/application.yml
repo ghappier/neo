@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: config-client
+#  cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          brokers: localhost
+#          defaultBrokerPort: 9092
+#          zkNodes: localhost
+#          defaultZkPort: 2181
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: admin
+#    password: 123456
+    
+server:
+  port: 8002
+  
+management:
+  security:
+    enabled: false
+    

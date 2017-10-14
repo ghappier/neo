@@ -1,0 +1,10 @@
+
+# 在Config Server 的jar文件里面configserver.yml默认配置了spring.config.name=configserver，server.port=8888,
+# 在bootstrap.yml（而不是在application.yml）文件配置里配置自定义的spring.config.name和server.port,
+# 防止springboot启动时自动切换到spring.config.name=configserver，server.port=8888而导致config-client出现Could not locate configserver via discovery的错误。
+server:
+  port: 8001
+  
+spring:
+  application:
+    name: config-server
