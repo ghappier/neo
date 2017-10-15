@@ -6,9 +6,10 @@ spring:
       profile: dev
       label: master
       #uri: http://localhost:8001/
-      discovery:
-        enabled: true
-        serviceId: config-server
+#      discovery:
+#        enabled: true
+##        serviceId: config-server
+#        serviceId: configserver
         
 eureka:
   client:

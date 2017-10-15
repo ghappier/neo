@@ -3,8 +3,25 @@
 # 在bootstrap.yml（而不是在application.yml）文件配置里配置自定义的spring.config.name和server.port,
 # 防止springboot启动时自动切换到spring.config.name=configserver，server.port=8888而导致config-client出现Could not locate configserver via discovery的错误。
 server:
-  port: 8001
+#  port: 8001
+  port: 8888
   
 spring:
   application:
-    name: config-server
+#    name: config-server
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          #uri: https://github.com/ghappier/config-center/
+          uri: file:///D:\EclipseWorkspaces\SpringCloud\config-center #Windows用file:///开头，Linux用file://开头
+          search-paths: config-repo
+          username: 
+          password: 
+    stream:
+      kafka:
+        binder:
+          zkNodes: localhost:2181
+          brokers: localhost:9092
+          

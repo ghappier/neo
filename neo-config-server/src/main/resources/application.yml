@@ -2,20 +2,30 @@
 #server:
 #  port: 8001
   
-spring:
+#spring:
 #  application:
 #    name: config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/ghappier/config-center/
-          search-paths: config-repo
-          username: 
-          password: 
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          #uri: https://github.com/ghappier/config-center/
+#          uri: file:///D:\EclipseWorkspaces\SpringCloud\config-center #Windows用file:///开头，Linux用file://开头
+#          search-paths: config-repo
+#          username: 
+#          password: 
+#    stream:
+#      kafka:
+#        binder:
+#          zkNodes: localhost:2181
+#          brokers: localhost:9092
           
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
+      
+management:
+  security:
+    enabled: false
       
