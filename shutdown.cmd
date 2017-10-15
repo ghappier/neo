@@ -15,3 +15,15 @@ TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
 SET SERVICE_NAME=neo-config-client
 TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
 
+%SLEEP% 1 > nul
+SET SERVICE_NAME=neo-api-gateway
+TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
+
+%SLEEP% 1 > nul
+SET SERVICE_NAME=neo-provider-user
+TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
+
+%SLEEP% 1 > nul
+SET SERVICE_NAME=neo-consumer-user
+TASKKILL /FI "WINDOWTITLE eq %SERVICE_NAME%*" /IM cmd.exe /F /T
+

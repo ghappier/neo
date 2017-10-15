@@ -1,0 +1,22 @@
+
+spring:
+  application:
+    name: api-gateway
+    
+server:
+  port: 8003
+  
+zuul:
+  routes:
+    user:
+      path: /user/**
+      service-id: user-service
+#    lawyer:
+#      path: /lawyer/**
+#      service-id: lawyer-service
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+      

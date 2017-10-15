@@ -22,6 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<neo-commons.version>1.0.0</neo-commons.version>
 	</properties>
 
 	<dependencies>
@@ -53,6 +54,10 @@
 		<module>neo-registration-center</module>
 		<module>neo-config-server</module>
 		<module>neo-config-client</module>
+		<module>neo-api-gateway</module>
+		<module>neo-commons</module>
+		<module>neo-provider-user</module>
+		<module>neo-consumer-user</module>
 	</modules>
-	
+
 </project>
