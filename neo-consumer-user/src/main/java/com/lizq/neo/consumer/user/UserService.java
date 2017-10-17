@@ -23,7 +23,7 @@ public class UserService {
 	
 	@SuppressWarnings("unchecked")
 	public JsonResult<User> get(int id) {
-		return template.getForObject("http://user-service/{}", JsonResult.class, id);
+		return template.getForObject("http://user-service/{id}", JsonResult.class, id);
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -42,7 +42,7 @@ public class UserService {
 	
 	public JsonResult<User> delete(int id) {
 		try {
-			template.delete("http://user-service/{}", id);
+			template.delete("http://user-service/{id}", id);
 		} catch (RestClientException e) {
 			return new JsonResult<User>().fail().msg(e.getLocalizedMessage());
 		}

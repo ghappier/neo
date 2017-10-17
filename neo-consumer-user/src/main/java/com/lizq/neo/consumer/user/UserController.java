@@ -39,8 +39,8 @@ public class UserController {
 		return userService.modify(user);
 	}
 	
-	@DeleteMapping(value="/")
-	public JsonResult<User> delete(int id) {
+	@DeleteMapping(value="/{id}")
+	public JsonResult<User> delete(@PathVariable int id) {
 		return userService.delete(id);
 	}
 }
